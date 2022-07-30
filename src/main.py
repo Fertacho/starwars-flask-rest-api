@@ -39,6 +39,22 @@ def handle_hello():
 
     return jsonify(response_body), 200
 
+@app.route('/people', methods=['GET'])
+def handle_people():
+    return "HelloPeople"
+
+@app.route('/people/<int:people_id>', methods=['GET'])
+def handle_peopleid():
+    return "HelloPerson"
+    
+@app.route('/planets', methods=['GET'])
+def handle_planets():
+    return "HelloPlanets"
+
+@app.route('/planets/<int:people_id>', methods=['GET'])
+def handle_planetsid():
+    return "HelloEarth"
+
 # this only runs if `$ python src/main.py` is executed
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT', 3000))
