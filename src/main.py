@@ -72,11 +72,11 @@ def handle_peoplefavs():
     return "Hello"
 
 @app.route('/favorite/planet/<int:planet_id>', methods=['DELETE'])
-def handle_planetfavs():
+def del_planetfavs():
     return "Hello"
 
 @app.route('/favorite/people/<int:people_id>', methods=['DELETE'])
-def handle_planetfavs():
+def del_peoplefavs():
     return "Hello"
 
 # this only runs if `$ python src/main.py` is executed
