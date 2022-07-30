@@ -55,6 +55,30 @@ def handle_planets():
 def handle_planetsid():
     return "HelloEarth"
 
+@app.route('/users', methods=['GET'])
+def handle_users():
+    return "HelloUsers"
+
+@app.route('/users/favorites', methods=['GET'])
+def handle_favorites():
+    return "HelloFavorites"
+
+@app.route('/favorite/planet/<int:planet_id>', methods=['POST'])
+def handle_planetfavs():
+    return "Hello"
+
+@app.route('/favorite/people/<int:people_id>', methods=['POST'])
+def handle_peoplefavs():
+    return "Hello"
+
+@app.route('/favorite/planet/<int:planet_id>', methods=['DELETE'])
+def handle_planetfavs():
+    return "Hello"
+
+@app.route('/favorite/people/<int:people_id>', methods=['DELETE'])
+def handle_planetfavs():
+    return "Hello"
+
 # this only runs if `$ python src/main.py` is executed
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT', 3000))
