@@ -41,19 +41,39 @@ def handle_hello():
 
 @app.route('/people', methods=['GET'])
 def handle_people():
-    return "HelloPeople"
+
+    response_body = {
+        "msg": "Hello, this is your GET /people response "
+    }
+
+    return jsonify(response_body), 200
 
 @app.route('/people/<int:people_id>', methods=['GET'])
 def handle_peopleid():
-    return "HelloPerson"
+
+    response_body = {
+        "msg": "Hello, this is your GET /people/<int:people_id> response "
+    }
+
+    return jsonify(response_body), 200
     
 @app.route('/planets', methods=['GET'])
 def handle_planets():
-    return "HelloPlanets"
 
-@app.route('/planets/<int:people_id>', methods=['GET'])
+    response_body = {
+        "msg": "Hello, this is your GET /planets response "
+    }
+
+    return jsonify(response_body), 200
+
+@app.route('/planets/<int:planets_id>', methods=['GET'])
 def handle_planetsid():
-    return "HelloEarth"
+
+    response_body = {
+        "msg": "Hello, this is your GET /planets/<int:planets_id> response "
+    }
+
+    return jsonify(response_body), 200
 
 @app.route('/users', methods=['GET'])
 def handle_users():
